@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Application
+    x:Class="SampleApp.App"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:android="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.AndroidSpecific;assembly=Microsoft.Maui.Controls"
+    xmlns:styles="clr-namespace:SampleApp.Resources"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    android:Application.WindowSoftInputModeAdjust="Resize">
+    <Application.Resources>
+        <ResourceDictionary x:Name="AppDictionary">
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
+                <styles:CustomSizes />
+            </ResourceDictionary.MergedDictionaries>
+
+            <!--#region shared values-->
+            <x:Boolean x:Key="TrueValue">true</x:Boolean>
+            <x:Boolean x:Key="FalseValue">false</x:Boolean>
+            <x:Int32 x:Key="ZeroValue">0</x:Int32>
+            <x:Int32 x:Key="OneValue">1</x:Int32>
+            <x:Int32 x:Key="TwoValue">2</x:Int32>
+            <x:Int32 x:Key="ThreeValue">3</x:Int32>
+            <x:Int32 x:Key="FourValue">4</x:Int32>
+            <x:Int32 x:Key="FiveValue">5</x:Int32>
+            <x:Int32 x:Key="SixValue">6</x:Int32>
+            <x:Int32 x:Key="SevenValue">7</x:Int32>
+            <x:Int32 x:Key="EightValue">8</x:Int32>
+            <x:Int32 x:Key="NineValue">9</x:Int32>
+            <!--#endregion-->
+
+            <!--#region shared images-->
+            <x:String x:Key="VisaImageSource">SampleApp.Resources.Images.visa.png</x:String>
+            <x:String x:Key="MastercardImageSource">SampleApp.Resources.Images.mastercard.png</x:String>
+            <x:String x:Key="MaskImageSource">SampleApp.Resources.Images.mask.png</x:String>
+            <x:String x:Key="Mask2ImageSource">SampleApp.Resources.Images.mask2.png</x:String>
+
+            <x:String x:Key="MedicationReminderImageSource">SampleApp.Resources.Images.pill.png</x:String>
+            <x:String x:Key="MedicationPillImageSource">SampleApp.Resources.Images.medication_pill.png</x:String>
+            <!--#endregion-->
+
+            <!--#region converters-->
+            <toolkit:ImageResourceConverter x:Key="ImageResourceConverter" />
+            <!--#endregion-->
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

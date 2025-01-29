@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage
+    x:Class="SampleApp.Views.LandingTabbedPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:android="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.AndroidSpecific;assembly=Microsoft.Maui.Controls"
+    xmlns:fonts="clr-namespace:SampleApp.Resources.Fonts"
+    xmlns:local="clr-namespace:SampleApp.Views;assembly=SampleApp"
+    xmlns:prism="http://prismlibrary.com"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:viewmodels="clr-namespace:SampleApp.ViewModels"
+    android:TabbedPage.IsSwipePagingEnabled="False"
+    android:TabbedPage.OffscreenPageLimit="0"
+    android:TabbedPage.ToolbarPlacement="Bottom"
+    x:DataType="viewmodels:LandingTabbedPageViewModel">
+    <NavigationPage
+        Title="Home"
+        NavigationPage.HasNavigationBar="False">
+        <x:Arguments>
+            <local:HomePage />
+        </x:Arguments>
+        <NavigationPage.IconImageSource>
+            <FontImageSource
+                FontFamily="TranspireDesignIcons"
+                Glyph="{x:Static fonts:TranspireDesignIcons.TabBarHomeOutline}" />
+        </NavigationPage.IconImageSource>
+    </NavigationPage>
+</TabbedPage>

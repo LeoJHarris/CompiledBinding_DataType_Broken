@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+	<string name="asset_statements" translatable="false">
+		[{
+		\"include\": \"https://https://egw-etp-int-qrcode-web-au-se.azurewebsites.net/.well-known/assetlinks.json\"
+		}]
+	</string>
+	<string name="com.crashlytics.android.build_id">1.0</string>
+	<string name="square_pay_button">Pay Now</string>
+	<string name="square_activity_title">Card Details</string>
+</resources>

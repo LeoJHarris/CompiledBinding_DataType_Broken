@@ -1,0 +1,500 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ResourceDictionary
+    x:Class="SampleApp.Resources.Styles.Styles"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:iOSSpecific="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.iOSSpecific;assembly=Microsoft.Maui.Controls"
+    xmlns:tabs="http://sharpnado.com">
+
+    <Style
+        x:Key="RatingBoxView"
+        TargetType="BoxView">
+        <Setter Property="HeightRequest" Value="8" />
+        <Setter Property="WidthRequest" Value="8" />
+        <Setter Property="CornerRadius" Value="4" />
+        <Setter Property="BackgroundColor" Value="LightGray" />
+    </Style>
+
+    <Style
+        x:Key="BaseTabbedPageStyle"
+        TargetType="TabbedPage">
+        <Setter Property="UnselectedTabColor" Value="White" />
+        <Setter Property="SelectedTabColor" Value="{DynamicResource BrandSecondaryColor}" />
+        <Setter Property="BarBackgroundColor" Value="{DynamicResource BrandPrimaryColor}" />
+    </Style>
+
+    <Style
+        x:Key="BaseTabStyle"
+        TargetType="tabs:UnderlinedTabItem">
+        <Setter Property="SelectedTabColor" Value="{DynamicResource BrandSecondaryColor}" />
+        <Setter Property="LabelSize" Value="18" />
+        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="UnselectedLabelColor" Value="White" />
+        <Setter Property="LabelSize" Value="14" />
+    </Style>
+
+    <Style
+        x:Key="BaseLabelSecondaryStyle"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource LightTextColor}" />
+        <Setter Property="FontSize" Value="16" />
+    </Style>
+
+    <Style
+        x:Key="BaseLabelSmallStyle"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource LightTextColor}" />
+        <Setter Property="FontSize" Value="14" />
+    </Style>
+
+    <Style
+        x:Key="BaseLabelBodyStyle"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource LightTextColor}" />
+        <Setter Property="FontSize" Value="18" />
+    </Style>
+
+    <Style
+        x:Key="BaseLabelHeaderStyle"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource LightTextColor}" />
+        <Setter Property="FontSize" Value="22" />
+    </Style>
+
+    <Style
+        x:Key="BaseLabelTitleStyle"
+        TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource LightTextColor}" />
+        <Setter Property="FontSize" Value="24" />
+    </Style>
+
+    <Style
+        x:Key="BaseLabelSmallRegularStyle"
+        BasedOn="{StaticResource BaseLabelSmallStyle}"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="RegularFont" />
+    </Style>
+
+    <Style
+        x:Key="BaseLabelSmallBoldStyle"
+        BasedOn="{StaticResource BaseLabelSmallStyle}"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="HeavyFont" />
+    </Style>
+
+    <Style
+        x:Key="BaseLabelSmallLightStyle"
+        BasedOn="{StaticResource BaseLabelSmallStyle}"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="LightFont" />
+    </Style>
+
+    <Style
+        x:Key="BaseLabelSecondaryRegularStyle"
+        BasedOn="{StaticResource BaseLabelSecondaryStyle}"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="RegularFont" />
+    </Style>
+
+    <Style
+        x:Key="BaseLabelSecondaryBoldStyle"
+        BasedOn="{StaticResource BaseLabelSecondaryStyle}"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="HeavyFont" />
+    </Style>
+
+    <Style
+        x:Key="BaseLabelSecondaryLightStyle"
+        BasedOn="{StaticResource BaseLabelSecondaryStyle}"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="LightFont" />
+    </Style>
+
+    <Style
+        x:Key="BaseLabelBodyRegularStyle"
+        BasedOn="{StaticResource BaseLabelBodyStyle}"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="RegularFont" />
+    </Style>
+
+    <Style
+        x:Key="BaseLabelBodyBoldStyle"
+        BasedOn="{StaticResource BaseLabelBodyStyle}"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="HeavyFont" />
+    </Style>
+
+    <Style
+        x:Key="BaseLabelBodyLightStyle"
+        BasedOn="{StaticResource BaseLabelBodyStyle}"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="LightFont" />
+    </Style>
+
+    <Style
+        x:Key="BaseLabelHeaderRegularStyle"
+        BasedOn="{StaticResource BaseLabelHeaderStyle}"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="RegularFont" />
+    </Style>
+
+    <Style
+        x:Key="BaseLabelHeaderBoldStyle"
+        BasedOn="{StaticResource BaseLabelHeaderStyle}"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="HeavyFont" />
+    </Style>
+
+    <Style
+        x:Key="BaseLabelHeaderLightStyle"
+        BasedOn="{StaticResource BaseLabelHeaderStyle}"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="LightFont" />
+    </Style>
+
+    <Style
+        x:Key="BaseLabelTitleRegularStyle"
+        BasedOn="{StaticResource BaseLabelTitleStyle}"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="RegularFont" />
+    </Style>
+
+    <Style
+        x:Key="BaseLabelTitleBoldStyle"
+        BasedOn="{StaticResource BaseLabelTitleStyle}"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="HeavyFont" />
+    </Style>
+
+    <Style
+        x:Key="BaseLabelTitleLightStyle"
+        BasedOn="{StaticResource BaseLabelTitleStyle}"
+        TargetType="Label">
+        <Setter Property="FontFamily" Value="LightFont" />
+    </Style>
+
+    <Style
+        x:Key="BaseEditorStyle"
+        TargetType="Editor">
+        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="TextColor" Value="{DynamicResource LightTextColor}" />
+        <Setter Property="FontFamily" Value="RegularFont" />
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="HeightRequest" Value="100" />
+        <Setter Property="PlaceholderColor" Value="{DynamicResource LightPlaceholderTextColor}" />
+    </Style>
+
+    <Style
+        x:Key="BaseRadioButtonStyle"
+        TargetType="RadioButton">
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="TextColor" Value="{DynamicResource LightTextColor}" />
+        <Setter Property="FontFamily" Value="RegularFont" />
+    </Style>
+
+    <Style
+        x:Key="BaseBodyButtonStyle"
+        TargetType="Button">
+        <Setter Property="HeightRequest" Value="50" />
+        <Setter Property="CornerRadius" Value="16" />
+        <Setter Property="FontFamily" Value="HeavyFont" />
+        <Setter Property="TextColor" Value="White" />
+        <Setter Property="FontSize" Value="18" />
+    </Style>
+
+    <Style
+        x:Key="BasePrimaryBodyButtonStyle"
+        BasedOn="{StaticResource BaseBodyButtonStyle}"
+        TargetType="Button">
+        <Setter Property="BackgroundColor" Value="{DynamicResource BrandPrimaryColor}" />
+    </Style>
+
+    <Style
+        x:Key="BasePrimaryBodyGhostButtonStyle"
+        BasedOn="{StaticResource BaseBodyButtonStyle}"
+        TargetType="Button">
+        <Setter Property="BorderColor" Value="{DynamicResource BrandPrimaryColor}" />
+        <Setter Property="BackgroundColor" Value="White" />
+        <Setter Property="BorderWidth" Value="1" />
+        <Setter Property="TextColor" Value="{DynamicResource BrandPrimaryColor}" />
+    </Style>
+
+    <Style
+        x:Key="BasePositiveBodyButtonStyle"
+        BasedOn="{StaticResource BaseBodyButtonStyle}"
+        TargetType="Button">
+        <Setter Property="BackgroundColor" Value="{DynamicResource LightSafeColor}" />
+    </Style>
+
+    <Style
+        x:Key="PositiveBodyGhostButtonStyle"
+        BasedOn="{StaticResource BaseBodyButtonStyle}"
+        TargetType="Button">
+        <Setter Property="BackgroundColor" Value="White" />
+        <Setter Property="BorderColor" Value="{DynamicResource LightSafeColor}" />
+        <Setter Property="BorderWidth" Value="1" />
+        <Setter Property="TextColor" Value="{DynamicResource LightSafeColor}" />
+    </Style>
+
+    <Style
+        x:Key="BaseNegativeButtonStyle"
+        BasedOn="{StaticResource BaseBodyButtonStyle}"
+        TargetType="Button">
+        <Setter Property="BackgroundColor" Value="{DynamicResource BrandRedColor}" />
+    </Style>
+
+    <Style
+        x:Key="BaseSmallButtonStyle"
+        TargetType="Button">
+        <Setter Property="HeightRequest" Value="34" />
+        <Setter Property="CornerRadius" Value="14" />
+        <Setter Property="FontFamily" Value="HeavyFont" />
+        <Setter Property="TextColor" Value="White" />
+        <Setter Property="FontSize" Value="14" />
+    </Style>
+
+    <Style
+        x:Key="BasePrimarySmallButtonStyle"
+        BasedOn="{StaticResource BaseSmallButtonStyle}"
+        TargetType="Button">
+        <Setter Property="BackgroundColor" Value="{DynamicResource BrandPrimaryColor}" />
+    </Style>
+
+    <Style
+        x:Key="BasePositiveSmallButtonStyle"
+        BasedOn="{StaticResource BaseSmallButtonStyle}"
+        TargetType="Button">
+        <Setter Property="BackgroundColor" Value="{DynamicResource LightSafeColor}" />
+    </Style>
+
+    <Style
+        x:Key="BaseNegativeSmallButtonStyle"
+        BasedOn="{StaticResource BaseSmallButtonStyle}"
+        TargetType="Button">
+        <Setter Property="BackgroundColor" Value="{DynamicResource BrandRedColor}" />
+    </Style>
+
+    <Style
+        x:Key="BaseNegativeSmallGhostButtonStyle"
+        BasedOn="{StaticResource BaseSmallButtonStyle}"
+        TargetType="Button">
+        <Setter Property="BackgroundColor" Value="White" />
+        <Setter Property="BorderColor" Value="{DynamicResource BrandRedColor}" />
+        <Setter Property="BorderWidth" Value="1" />
+        <Setter Property="TextColor" Value="{DynamicResource BrandRedColor}" />
+    </Style>
+
+    <Style
+        x:Key="BaseNegativeGhostButtonStyle"
+        BasedOn="{StaticResource BaseSmallButtonStyle}"
+        TargetType="Button">
+        <Setter Property="BackgroundColor" Value="White" />
+        <Setter Property="BorderColor" Value="{DynamicResource BrandRedColor}" />
+        <Setter Property="BorderWidth" Value="1" />
+        <Setter Property="TextColor" Value="{DynamicResource BrandRedColor}" />
+    </Style>
+
+    <Style
+        x:Key="BaseSmallPrimaryButtonStyle"
+        BasedOn="{StaticResource BaseSmallButtonStyle}"
+        TargetType="Button">
+        <Setter Property="BackgroundColor" Value="{DynamicResource BrandPrimaryColor}" />
+    </Style>
+
+    <Style
+        x:Key="BaseSmallGhostButtonStyle"
+        BasedOn="{StaticResource BaseSmallButtonStyle}"
+        TargetType="Button">
+        <Setter Property="BorderColor" Value="{DynamicResource BrandPrimaryColor}" />
+        <Setter Property="BackgroundColor" Value="White" />
+        <Setter Property="BorderWidth" Value="1" />
+        <Setter Property="TextColor" Value="{DynamicResource BrandPrimaryColor}" />
+    </Style>
+
+    <Style
+        x:Key="BaseSwitchStyle"
+        TargetType="Switch">
+        <Setter Property="OnColor" Value="{DynamicResource LightSwitchOnColor}" />
+        <Setter Property="ThumbColor" Value="{DynamicResource LightSafeColor}" />
+    </Style>
+
+    <Style
+        x:Key="BaseEntry"
+        TargetType="Entry">
+        <Setter Property="PlaceholderColor" Value="{DynamicResource LightPlaceholderTextColor}" />
+        <Setter Property="TextColor" Value="{DynamicResource LightTextColor}" />
+        <Setter Property="FontFamily" Value="RegularFont" />
+    </Style>
+
+    <Style
+        x:Key="BaseEntryStyle"
+        BasedOn="{StaticResource BaseEntry}"
+        TargetType="Entry">
+        <Setter Property="Margin" Value="16,0" />
+        <Setter Property="HeightRequest">
+            <Setter.Value>
+                <OnPlatform x:TypeArguments="x:Double">
+                    <OnPlatform.Platforms>
+                        <On
+                            Platform="iOS"
+                            Value="50" />
+                        <On
+                            Platform="Android"
+                            Value="50" />
+                    </OnPlatform.Platforms>
+                </OnPlatform>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style
+        x:Key="BaseValidEntryStyle"
+        BasedOn="{StaticResource BaseEntryStyle}"
+        TargetType="Entry" />
+
+    <Style
+        x:Key="BaseInvalidEntryStyle"
+        BasedOn="{StaticResource BaseEntryStyle}"
+        TargetType="Entry" />
+
+    <Style
+        x:Key="BaseTimePickerStyle"
+        TargetType="TimePicker">
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="TextColor" Value="{DynamicResource LightTextColor}" />
+        <Setter Property="FontFamily" Value="RegularFont" />
+        <Setter Property="iOSSpecific:Picker.UpdateMode" Value="WhenFinished" />
+        <Setter Property="BackgroundColor" Value="White" />
+        <Setter Property="HeightRequest">
+            <Setter.Value>
+                <OnPlatform x:TypeArguments="x:Double">
+                    <OnPlatform.Platforms>
+                        <On
+                            Platform="iOS"
+                            Value="50" />
+                        <On
+                            Platform="Android"
+                            Value="60" />
+                    </OnPlatform.Platforms>
+                </OnPlatform>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="WidthRequest">
+            <Setter.Value>
+                <OnPlatform x:TypeArguments="x:Double">
+                    <OnPlatform.Platforms>
+                        <On
+                            Platform="iOS"
+                            Value="100" />
+                        <On
+                            Platform="Android"
+                            Value="100" />
+                    </OnPlatform.Platforms>
+                </OnPlatform>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style
+        x:Key="BaseDatePickerStyle"
+        TargetType="DatePicker">
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="TextColor" Value="{DynamicResource LightTextColor}" />
+        <Setter Property="FontFamily" Value="RegularFont" />
+        <Setter Property="iOSSpecific:Picker.UpdateMode" Value="WhenFinished" />
+        <Setter Property="Format" Value="{DynamicResource DayMonthYearTimeFormat}" />
+        <Setter Property="BackgroundColor" Value="White" />
+        <Setter Property="HeightRequest">
+            <Setter.Value>
+                <OnPlatform x:TypeArguments="x:Double">
+                    <OnPlatform.Platforms>
+                        <On
+                            Platform="iOS"
+                            Value="60" />
+                        <On
+                            Platform="Android"
+                            Value="60" />
+                    </OnPlatform.Platforms>
+                </OnPlatform>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style
+        x:Key="BasePickerStyle"
+        TargetType="Picker">
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="TextColor" Value="{DynamicResource LightTextColor}" />
+        <Setter Property="FontFamily" Value="RegularFont" />
+        <Setter Property="iOSSpecific:Picker.UpdateMode" Value="WhenFinished" />
+        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="HeightRequest">
+            <Setter.Value>
+                <OnPlatform x:TypeArguments="x:Double">
+                    <OnPlatform.Platforms>
+                        <On
+                            Platform="iOS"
+                            Value="60" />
+                        <On
+                            Platform="Android"
+                            Value="60" />
+                    </OnPlatform.Platforms>
+                </OnPlatform>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style
+        x:Key="BaseCheckBoxStyle"
+        TargetType="CheckBox">
+        <Setter Property="Color" Value="{DynamicResource LightSafeColor}" />
+    </Style>
+
+    <Style
+        x:Key="BaseSearchBarStyle"
+        TargetType="SearchBar">
+        <Setter Property="TextTransform" Value="Lowercase" />
+        <Setter Property="HeightRequest">
+            <Setter.Value>
+                <OnPlatform x:TypeArguments="x:Double">
+                    <OnPlatform.Platforms>
+                        <On
+                            Platform="iOS"
+                            Value="50" />
+                        <On
+                            Platform="Android"
+                            Value="50" />
+                    </OnPlatform.Platforms>
+                </OnPlatform>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="PlaceholderColor" Value="{DynamicResource LightPlaceholderTextColor}" />
+        <Setter Property="IsSpellCheckEnabled" Value="False" />
+        <Setter Property="TextTransform" Value="None" />
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="TextColor" Value="{DynamicResource LightTextColor}" />
+        <Setter Property="FontFamily" Value="RegularFont" />
+    </Style>
+
+    <Style
+        x:Key="BaseActivityIndicatorStyle"
+        TargetType="ActivityIndicator">
+        <Setter Property="IsRunning" Value="True" />
+        <Setter Property="Color" Value="White" />
+    </Style>
+
+    <Style
+        x:Key="BaseActivityIndicatorLargeStyle"
+        BasedOn="{StaticResource BaseActivityIndicatorStyle}"
+        TargetType="ActivityIndicator">
+        <Setter Property="HeightRequest" Value="48" />
+        <Setter Property="WidthRequest" Value="48" />
+    </Style>
+
+    <Style
+        x:Key="BaseActivityIndicatorSmallStyle"
+        TargetType="ActivityIndicator">
+        <Setter Property="HeightRequest" Value="24" />
+        <Setter Property="WidthRequest" Value="24" />
+    </Style>
+</ResourceDictionary>

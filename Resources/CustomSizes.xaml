@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ResourceDictionary
+    x:Class="SampleApp.Resources.CustomSizes"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <OnPlatform
+        x:Key="FontTinySize"
+        x:TypeArguments="x:Double">
+        <On
+            Platform="Android"
+            Value="14" />
+        <On
+            Platform="iOS"
+            Value="14" />
+    </OnPlatform>
+
+    <OnPlatform
+        x:Key="FontExtraSmallSize"
+        x:TypeArguments="x:Double">
+        <On
+            Platform="Android"
+            Value="18" />
+        <On
+            Platform="iOS"
+            Value="18" />
+    </OnPlatform>
+
+    <OnPlatform
+        x:Key="FontSmallSize"
+        x:TypeArguments="x:Double">
+        <On
+            Platform="Android"
+            Value="22" />
+        <On
+            Platform="iOS"
+            Value="22" />
+    </OnPlatform>
+
+    <OnPlatform
+        x:Key="FontMediumSize"
+        x:TypeArguments="x:Double">
+        <On
+            Platform="Android"
+            Value="24" />
+        <On
+            Platform="iOS"
+            Value="24" />
+    </OnPlatform>
+
+    <OnPlatform
+        x:Key="FontSecondarySize"
+        x:TypeArguments="x:Double">
+        <On
+            Platform="Android"
+            Value="32" />
+        <On
+            Platform="iOS"
+            Value="32" />
+    </OnPlatform>
+
+    <OnPlatform
+        x:Key="FontBodySize"
+        x:TypeArguments="x:Double">
+        <On
+            Platform="Android"
+            Value="48" />
+        <On
+            Platform="iOS"
+            Value="48" />
+    </OnPlatform>
+
+    <OnPlatform
+        x:Key="FontLargeSize"
+        x:TypeArguments="x:Double">
+        <On
+            Platform="Android"
+            Value="60" />
+        <On
+            Platform="iOS"
+            Value="60" />
+    </OnPlatform>
+
+    <OnPlatform
+        x:Key="FontTitleSize"
+        x:TypeArguments="x:Double">
+        <On
+            Platform="Android"
+            Value="120" />
+        <On
+            Platform="iOS"
+            Value="120" />
+    </OnPlatform>
+</ResourceDictionary>

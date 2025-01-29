@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="SampleApp.Views.HomePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:essentials="clr-namespace:Microsoft.Maui.ApplicationModel;assembly=Microsoft.Maui.Essentials"
+    xmlns:fonts="clr-namespace:SampleApp.Resources.Fonts"
+    xmlns:infrastructure="clr-namespace:SampleApp.Infrastructure"
+    xmlns:prism="http://prismlibrary.com"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:viewmodels="clr-namespace:SampleApp.ViewModels"
+    xmlns:views="clr-namespace:SampleApp.Views"
+    x:DataType="viewmodels:HomePageViewModel"
+    NavigationPage.HasNavigationBar="False">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style
+                x:Key="minorBorder"
+                TargetType="Border">
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="StrokeShape" Value="RoundRectangle 16" />
+                <Setter Property="Stroke" Value="LightGray" />
+                <Setter Property="HeightRequest" Value="100" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.IconImageSource>
+        <FontImageSource
+            FontFamily="TranspireDesignIcons"
+            Glyph="{x:Static fonts:TranspireDesignIcons.TabBarHomeOutline}" />
+    </ContentPage.IconImageSource>
+    <Grid toolkit:StateContainer.CurrentState="{Binding CurrentPageState}">
+        <toolkit:StateContainer.StateViews>
+            <ContentView toolkit:StateView.StateKey="{x:Static infrastructure:StateKey.Loading}" />
+            <RefreshView
+                toolkit:StateView.StateKey="{x:Static infrastructure:StateKey.Success}"
+                Command="{Binding PullToRefreshPageCommand}"
+                IsRefreshing="{Binding IsPageRefreshing}">
+                <RefreshView.RefreshColor>
+                    <OnPlatform
+                        x:TypeArguments="Color"
+                        Default="Transparent">
+                        <On
+                            Platform="iOS"
+                            Value="{StaticResource BrandPrimaryColor}" />
+                        <On
+                            Platform="Android"
+                            Value="Transparent" />
+                    </OnPlatform>
+                </RefreshView.RefreshColor>
+                <ScrollView>
+                    <VerticalStackLayout>
+                        <VerticalStackLayout>
+                            <Grid
+                                Padding="16"
+                                BackgroundColor="{DynamicResource BrandPrimaryColor}"
+                                ColumnDefinitions="auto,*"
+                                ColumnSpacing="16">
+                                <Image
+                                    Grid.Column="0"
+                                    Aspect="AspectFit"
+                                    HeightRequest="60"
+                                    Source="{Binding Source={StaticResource LogoVariant2ImageSource}, Converter={StaticResource ImageResourceConverter}, x:DataType=x:String}"
+                                    VerticalOptions="Center"
+                                    WidthRequest="60" />
+                                <Label
+                                    Grid.Column="1"
+                                    Style="{StaticResource LabelBodyLightStyle}"
+                                    TextColor="White"
+                                    VerticalOptions="Center"
+                                    VerticalTextAlignment="Center">
+                                    <Label.Triggers>
+                                        <DataTrigger
+                                            Binding="{Binding IsLoggedIn}"
+                                            TargetType="Label"
+                                            Value="True">
+                                            <Setter Property="FormattedText">
+                                                <Setter.Value>
+                                                    <FormattedString>
+                                                        <Span Text="Weoclfdsa" />
+                                                        <Span Text=", " />
+                                                        <Span Text="Test" />
+                                                    </FormattedString>
+                                                </Setter.Value>
+                                            </Setter>
+                                        </DataTrigger>
+                                        <DataTrigger
+                                            Binding="{Binding IsLoggedIn}"
+                                            TargetType="Label"
+                                            Value="False">
+                                            <Setter Property="FormattedText">
+                                                <Setter.Value>
+                                                    <FormattedString>
+                                                        <Span Text="asda" />
+                                                        <Span Text="!" />
+                                                    </FormattedString>
+                                                </Setter.Value>
+                                            </Setter>
+                                        </DataTrigger>
+                                    </Label.Triggers>
+                                </Label>
+                            </Grid>
+                            <ContentView>
+                                <VerticalStackLayout
+                                    Padding="16,0,16,16"
+                                    BackgroundColor="{DynamicResource BrandPrimaryColor}"
+                                    Spacing="8">
+                                    <Border
+                                        BackgroundColor="White"
+                                        StrokeShape="RoundRectangle 16"
+                                        StrokeThickness="0">
+                                        <Grid
+                                            Padding="16"
+                                            ColumnDefinitions="*, auto"
+                                            ColumnSpacing="8">
+                                            <Grid.GestureRecognizers>
+                                                <TapGestureRecognizer />
+                                            </Grid.GestureRecognizers>
+                                            <VerticalStackLayout Grid.Column="0">
+                                                <Label
+                                                    Style="{StaticResource LabelTitleBoldStyle}"
+                                                    Text="Test"
+                                                    TextTransform="Uppercase" />
+                                                <Label
+                                                    Style="{StaticResource LabelBodyLightStyle}"
+                                                    Text="a" />
+                                            </VerticalStackLayout>
+                                            <Image
+                                                Grid.Column="1"
+                                                HeightRequest="48"
+                                                Source="{Binding Source={StaticResource MedicationPillImageSource}, Converter={StaticResource ImageResourceConverter}, x:DataType=x:String}"
+                                                WidthRequest="48" />
+                                        </Grid>
+                                    </Border>
+                                    <Border
+                                        BackgroundColor="White"
+                                        StrokeShape="RoundRectangle 16">
+                                        <Grid
+                                            Padding="16"
+                                            ColumnDefinitions="*,auto"
+                                            ColumnSpacing="16">
+                                            <Grid.GestureRecognizers>
+                                                <TapGestureRecognizer />
+                                            </Grid.GestureRecognizers>
+                                            <VerticalStackLayout
+                                                Grid.Column="0"
+                                                Spacing="4">
+                                                <VerticalStackLayout>
+                                                    <Label
+                                                        Style="{StaticResource LabelTitleBoldStyle}"
+                                                        Text="a"
+                                                        TextTransform="Uppercase" />
+                                                    <Label
+                                                        Style="{StaticResource LabelBodyLightStyle}"
+                                                        Text="a" />
+                                                </VerticalStackLayout>
+                                                <Border
+                                                    Padding="4"
+                                                    BackgroundColor="{StaticResource LightDangerLightRed}"
+                                                    IsVisible="{Binding NotificationsPermissionStatus, Converter={toolkit:IsNotEqualConverter}, ConverterParameter={x:Static essentials:PermissionStatus.Granted}}"
+                                                    StrokeShape="RoundRectangle 8"
+                                                    StrokeThickness="0">
+                                                    <Label
+                                                        HorizontalTextAlignment="Center"
+                                                        Style="{StaticResource LabelSmallRegularStyle}"
+                                                        Text="Requires notifications to be enabled"
+                                                        TextColor="{DynamicResource LightDangerDarkRed}" />
+                                                </Border>
+                                            </VerticalStackLayout>
+                                            <Image
+                                                Grid.Column="1"
+                                                HeightRequest="48"
+                                                Source="{Binding Source={StaticResource MedicationReminderImageSource}, Converter={StaticResource ImageResourceConverter}, x:DataType=x:String}"
+                                                WidthRequest="48" />
+                                        </Grid>
+                                    </Border>
+                                </VerticalStackLayout>
+                            </ContentView>
+                        </VerticalStackLayout>
+                        <VerticalStackLayout
+                            Margin="16"
+                            Spacing="16">
+                            <VerticalStackLayout>
+                                <Label
+                                    Style="{StaticResource LabelSecondaryLightStyle}"
+                                    Text="Explore}" />
+                                <Label
+                                    Style="{StaticResource LabelBodyBoldStyle}"
+                                    Text="Name" />
+                            </VerticalStackLayout>
+                            <ContentView>
+                                <Grid
+                                    ColumnDefinitions="5*, 5*"
+                                    ColumnSpacing="8"
+                                    RowDefinitions="auto, auto, auto, auto"
+                                    RowSpacing="8">
+                                    <Border
+                                        Grid.Row="0"
+                                        Grid.Column="0"
+                                        Style="{StaticResource minorBorder}">
+                                        <Border.Shadow>
+                                            <Shadow
+                                                Brush="Black"
+                                                Opacity="0.1"
+                                                Radius="8"
+                                                Offset="4,4" />
+                                        </Border.Shadow>
+                                        <Border.GestureRecognizers>
+                                            <TapGestureRecognizer />
+                                        </Border.GestureRecognizers>
+                                        <Grid RowDefinitions="*">
+                                            <Grid
+                                                Grid.Row="0"
+                                                Grid.Column="0"
+                                                HorizontalOptions="Center"
+                                                VerticalOptions="Center" />
+                                        </Grid>
+                                    </Border>
+                                    <Border
+                                        Grid.Row="0"
+                                        Grid.Column="1"
+                                        Style="{StaticResource minorBorder}">
+                                        <Border.Shadow>
+                                            <Shadow
+                                                Brush="Black"
+                                                Opacity="0.1"
+                                                Radius="8"
+                                                Offset="4,4" />
+                                        </Border.Shadow>
+                                        <Border.GestureRecognizers>
+                                            <TapGestureRecognizer />
+                                        </Border.GestureRecognizers>
+                                        <VerticalStackLayout
+                                            HorizontalOptions="Center"
+                                            VerticalOptions="Center">
+                                            <Image
+                                                HeightRequest="{DynamicResource FontSecondarySize}"
+                                                Source="{Binding Source={StaticResource InstantConsultImageSource}, Converter={StaticResource ImageResourceConverter}, x:DataType=x:String}"
+                                                WidthRequest="{DynamicResource FontSecondarySize}" />
+                                            <Label
+                                                Style="{StaticResource LabelBodyBoldStyle}"
+                                                Text="Doctor" />
+                                        </VerticalStackLayout>
+                                    </Border>
+                                    <Border
+                                        Grid.Row="1"
+                                        Grid.Column="0"
+                                        Style="{StaticResource minorBorder}">
+                                        <Border.Shadow>
+                                            <Shadow
+                                                Brush="Black"
+                                                Opacity="0.1"
+                                                Radius="8"
+                                                Offset="4,4" />
+                                        </Border.Shadow>
+                                        <Border.GestureRecognizers>
+                                            <TapGestureRecognizer />
+                                        </Border.GestureRecognizers>
+                                        <VerticalStackLayout
+                                            HorizontalOptions="Center"
+                                            VerticalOptions="Center">
+                                            <Image
+                                                HeightRequest="{DynamicResource FontSecondarySize}"
+                                                WidthRequest="{DynamicResource FontSecondarySize}">
+                                                <Image.Source>
+                                                    <FontImageSource
+                                                        FontFamily="TranspireDesignIcons"
+                                                        Glyph="{x:Static fonts:TranspireDesignIcons.BrandCwWebsite}"
+                                                        Size="{DynamicResource FontSecondarySize}"
+                                                        Color="Black" />
+                                                </Image.Source>
+                                            </Image>
+                                            <Label
+                                                Style="{StaticResource LabelBodyBoldStyle}"
+                                                Text="a" />
+                                        </VerticalStackLayout>
+                                    </Border>
+                                    <Border
+                                        Grid.Row="2"
+                                        Grid.Column="0"
+                                        Style="{StaticResource minorBorder}">
+                                        <Border.Shadow>
+                                            <Shadow
+                                                Brush="Black"
+                                                Opacity="0.1"
+                                                Radius="8"
+                                                Offset="4,4" />
+                                        </Border.Shadow>
+                                        <Border.GestureRecognizers>
+                                            <TapGestureRecognizer />
+                                        </Border.GestureRecognizers>
+                                        <VerticalStackLayout
+                                            HorizontalOptions="Center"
+                                            VerticalOptions="Center">
+                                            <Image
+                                                HeightRequest="{DynamicResource FontSecondarySize}"
+                                                WidthRequest="{DynamicResource FontSecondarySize}">
+                                                <Image.Source>
+                                                    <FontImageSource
+                                                        FontFamily="TranspireDesignIcons"
+                                                        Glyph="{x:Static fonts:TranspireDesignIcons.StoreLocation}"
+                                                        Size="{DynamicResource FontSecondarySize}"
+                                                        Color="Black" />
+                                                </Image.Source>
+                                            </Image>
+                                            <Label
+                                                HorizontalTextAlignment="Center"
+                                                Style="{StaticResource LabelBodyBoldStyle}"
+                                                Text="Test" />
+                                        </VerticalStackLayout>
+                                    </Border>
+                                    <Border
+                                        Grid.Row="2"
+                                        Grid.Column="1"
+                                        Style="{StaticResource minorBorder}">
+                                        <Border.Shadow>
+                                            <Shadow
+                                                Brush="Black"
+                                                Opacity="0.1"
+                                                Radius="8"
+                                                Offset="4,4" />
+                                        </Border.Shadow>
+                                        <Border.GestureRecognizers>
+                                            <TapGestureRecognizer />
+                                        </Border.GestureRecognizers>
+                                        <VerticalStackLayout
+                                            HorizontalOptions="Center"
+                                            VerticalOptions="Center">
+                                            <Image
+                                                HeightRequest="{DynamicResource FontSecondarySize}"
+                                                WidthRequest="{DynamicResource FontSecondarySize}">
+                                                <Image.Source>
+                                                    <FontImageSource
+                                                        FontFamily="TranspireDesignIcons"
+                                                        Glyph="{x:Static fonts:TranspireDesignIcons.TileCompetitions}"
+                                                        Size="{DynamicResource FontSecondarySize}"
+                                                        Color="Black" />
+                                                </Image.Source>
+                                            </Image>
+                                            <Label
+                                                HorizontalTextAlignment="Center"
+                                                Style="{StaticResource LabelBodyBoldStyle}"
+                                                Text="Test" />
+                                        </VerticalStackLayout>
+                                    </Border>
+                                    <Border
+                                        Grid.Row="3"
+                                        Grid.Column="0"
+                                        Style="{StaticResource minorBorder}">
+                                        <Border.Shadow>
+                                            <Shadow
+                                                Brush="Black"
+                                                Opacity="0.1"
+                                                Radius="8"
+                                                Offset="4,4" />
+                                        </Border.Shadow>
+                                        <Border.GestureRecognizers>
+                                            <TapGestureRecognizer />
+                                        </Border.GestureRecognizers>
+                                        <VerticalStackLayout
+                                            HorizontalOptions="Center"
+                                            VerticalOptions="Center">
+                                            <Image
+                                                HeightRequest="{DynamicResource FontSecondarySize}"
+                                                WidthRequest="{DynamicResource FontSecondarySize}">
+                                                <Image.Source>
+                                                    <FontImageSource
+                                                        FontFamily="TranspireDesignIcons"
+                                                        Glyph="{x:Static fonts:TranspireDesignIcons.BrandWellness}"
+                                                        Size="{DynamicResource FontSecondarySize}"
+                                                        Color="Black" />
+                                                </Image.Source>
+                                            </Image>
+                                            <Label
+                                                HorizontalTextAlignment="Center"
+                                                Style="{StaticResource LabelBodyBoldStyle}"
+                                                Text="Test" />
+                                        </VerticalStackLayout>
+                                    </Border>
+                                </Grid>
+                            </ContentView>
+                        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                </ScrollView>
+            </RefreshView>
+        </toolkit:StateContainer.StateViews>
+    </Grid>
+</ContentPage>

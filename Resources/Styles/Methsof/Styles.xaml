@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ResourceDictionary
+    x:Class="SampleApp.Resources.Styles.Methsof.Styles"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:tabs="http://sharpnado.com">
+
+    <Style
+        ApplyToDerivedTypes="True"
+        TargetType="NavigationPage">
+        <Setter Property="BarTextColor" Value="White" />
+        <Setter Property="BarBackgroundColor" Value="{DynamicResource BrandPrimaryColor}" />
+        <Setter Property="IconColor" Value="White" />
+    </Style>
+
+    <Style
+        x:Key="TabbedPageStyle"
+        BasedOn="{StaticResource BaseTabbedPageStyle}"
+        TargetType="TabbedPage" />
+
+    <Style
+        x:Key="TabStyle"
+        BasedOn="{StaticResource BaseTabStyle}"
+        TargetType="tabs:UnderlinedTabItem" />
+
+    <Style
+        x:Key="EntryStyle"
+        BasedOn="{StaticResource BaseEntryStyle}"
+        TargetType="Entry" />
+
+    <Style
+        x:Key="InvalidEntryStyle"
+        BasedOn="{StaticResource BaseInvalidEntryStyle}"
+        TargetType="Entry" />
+
+    <Style
+        x:Key="ValidEntryStyle"
+        BasedOn="{StaticResource BaseValidEntryStyle}"
+        TargetType="Entry" />
+
+    <Style
+        x:Key="LabelSmallRegularStyle"
+        BasedOn="{StaticResource BaseLabelSmallRegularStyle}"
+        TargetType="Label" />
+
+    <Style
+        x:Key="LabelSmallBoldStyle"
+        BasedOn="{StaticResource BaseLabelSmallBoldStyle}"
+        TargetType="Label" />
+
+    <Style
+        x:Key="LabelSmallLightStyle"
+        BasedOn="{StaticResource BaseLabelSmallLightStyle}"
+        TargetType="Label" />
+
+    <Style
+        x:Key="LabelSecondaryRegularStyle"
+        BasedOn="{StaticResource BaseLabelSecondaryRegularStyle}"
+        TargetType="Label" />
+
+    <Style
+        x:Key="LabelSecondaryBoldStyle"
+        BasedOn="{StaticResource BaseLabelSecondaryBoldStyle}"
+        TargetType="Label" />
+
+    <Style
+        x:Key="LabelSecondaryLightStyle"
+        BasedOn="{StaticResource BaseLabelSecondaryLightStyle}"
+        TargetType="Label" />
+
+    <Style
+        x:Key="LabelBodyRegularStyle"
+        BasedOn="{StaticResource BaseLabelBodyRegularStyle}"
+        TargetType="Label" />
+
+    <Style
+        x:Key="LabelBodyBoldStyle"
+        BasedOn="{StaticResource BaseLabelBodyBoldStyle}"
+        TargetType="Label" />
+
+    <Style
+        x:Key="LabelBodyLightStyle"
+        BasedOn="{StaticResource BaseLabelBodyLightStyle}"
+        TargetType="Label" />
+
+    <Style
+        x:Key="LabelHeaderLightStyle"
+        BasedOn="{StaticResource BaseLabelHeaderLightStyle}"
+        TargetType="Label" />
+
+    <Style
+        x:Key="LabelHeaderRegularStyle"
+        BasedOn="{StaticResource BaseLabelHeaderRegularStyle}"
+        TargetType="Label" />
+
+    <Style
+        x:Key="LabelHeaderBoldStyle"
+        BasedOn="{StaticResource BaseLabelHeaderBoldStyle}"
+        TargetType="Label" />
+
+    <Style
+        x:Key="LabelTitleRegularStyle"
+        BasedOn="{StaticResource BaseLabelTitleRegularStyle}"
+        TargetType="Label" />
+
+    <Style
+        x:Key="LabelTitleBoldStyle"
+        BasedOn="{StaticResource BaseLabelTitleBoldStyle}"
+        TargetType="Label" />
+
+    <Style
+        x:Key="LabelTitleLightStyle"
+        BasedOn="{StaticResource BaseLabelTitleLightStyle}"
+        TargetType="Label" />
+
+    <Style
+        x:Key="EditorStyle"
+        BasedOn="{StaticResource BaseEditorStyle}"
+        TargetType="Editor" />
+
+    <Style
+        x:Key="RadioButtonStyle"
+        BasedOn="{StaticResource BaseRadioButtonStyle}"
+        TargetType="RadioButton" />
+
+    <Style
+        x:Key="PrimaryRegularButtonStyle"
+        BasedOn="{StaticResource BasePrimaryBodyButtonStyle}"
+        TargetType="Button" />
+
+    <Style
+        x:Key="PrimaryRegularGhostButtonStyle"
+        BasedOn="{StaticResource BasePrimaryBodyGhostButtonStyle}"
+        TargetType="Button" />
+
+    <Style
+        x:Key="PositiveBodyButtonStyle"
+        BasedOn="{StaticResource BasePositiveBodyButtonStyle}"
+        TargetType="Button" />
+
+    <Style
+        x:Key="PositiveSmallButtonStyle"
+        BasedOn="{StaticResource BasePositiveSmallButtonStyle}"
+        TargetType="Button" />
+
+    <Style
+        x:Key="PositiveBodyGhostButtonStyle"
+        BasedOn="{StaticResource PositiveBodyGhostButtonStyle}"
+        TargetType="Button" />
+
+    <Style
+        x:Key="NegativeButtonStyle"
+        BasedOn="{StaticResource BaseNegativeButtonStyle}"
+        TargetType="Button" />
+
+    <Style
+        x:Key="PrimarySmallButtonStyle"
+        BasedOn="{StaticResource BasePrimarySmallButtonStyle}"
+        TargetType="Button" />
+
+    <Style
+        x:Key="NegativeSmallGhostButtonStyle"
+        BasedOn="{StaticResource BaseNegativeSmallGhostButtonStyle}"
+        TargetType="Button" />
+
+    <Style
+        x:Key="NegativeSmallButtonStyle"
+        BasedOn="{StaticResource BaseNegativeSmallButtonStyle}"
+        TargetType="Button" />
+
+    <Style
+        x:Key="SmallGhostButtonStyle"
+        BasedOn="{StaticResource BaseSmallGhostButtonStyle}"
+        TargetType="Button" />
+
+    <Style
+        x:Key="SmallPrimaryButtonStyle"
+        BasedOn="{StaticResource BaseSmallPrimaryButtonStyle}"
+        TargetType="Button" />
+
+    <Style
+        x:Key="NegativeGhostButtonStyle"
+        BasedOn="{StaticResource BaseNegativeGhostButtonStyle}"
+        TargetType="Button" />
+
+    <Style
+        x:Key="SwitchStyle"
+        BasedOn="{StaticResource BaseSwitchStyle}"
+        TargetType="Switch" />
+
+    <Style
+        x:Key="TimePickerStyle"
+        BasedOn="{StaticResource BaseTimePickerStyle}"
+        TargetType="TimePicker" />
+
+    <Style
+        x:Key="PickerStyle"
+        BasedOn="{StaticResource BasePickerStyle}"
+        TargetType="Picker" />
+
+    <Style
+        x:Key="DatePickerStyle"
+        BasedOn="{StaticResource BaseDatePickerStyle}"
+        TargetType="DatePicker" />
+
+    <Style
+        x:Key="SearchBarStyle"
+        BasedOn="{StaticResource BaseSearchBarStyle}"
+        TargetType="SearchBar" />
+
+    <Style
+        x:Key="CheckBoxStyle"
+        BasedOn="{StaticResource BaseCheckBoxStyle}"
+        TargetType="CheckBox" />
+
+    <Style
+        x:Key="ActivityIndicatorLargeStyle"
+        BasedOn="{StaticResource BaseActivityIndicatorLargeStyle}"
+        TargetType="ActivityIndicator" />
+
+    <Style
+        x:Key="ActivityIndicatorSmallStyle"
+        BasedOn="{StaticResource BaseActivityIndicatorSmallStyle}"
+        TargetType="ActivityIndicator" />
+
+    <x:String x:Key="LogoVariant1ImageSource">SampleApp.Resources.Images.Methsof.logo.png</x:String>
+    <x:String x:Key="LogoVariant2ImageSource">SampleApp.Resources.Images.Methsof.logo_inverted.png</x:String>
+    <x:String x:Key="ConversationImageSource">SampleApp.Resources.Images.Methsof.logo_transparent.png</x:String>
+    <x:String x:Key="InstantConsultImageSource">SampleApp.Resources.Images.CWHAU.instant_consult_icon.png</x:String>
+
+    <x:String x:Key="AppBrandName">Methsof App</x:String>
+</ResourceDictionary>
